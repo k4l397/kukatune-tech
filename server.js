@@ -1,8 +1,10 @@
+// ---------- PREAMBLE ---------- //
+
 var express = require('express');
-var graphql = require('graphql');
-var express_graphql = require('express-graphql');
 
 var app = express();
+
+// ---------- DATABASE ---------- //
 
 var db = {
   characters: [
@@ -118,6 +120,9 @@ function db_find_status(name) {
 
 // ---------- GRAPHQL ---------- //
 
+var graphql = require('graphql');
+var express_graphql = require('express-graphql');
+
 var graphql_status_type = new graphql.GraphQLObjectType({
   name: 'Status',
   description: 'A character\'s status at the end of the book',
@@ -205,6 +210,21 @@ app.use('/graphql', express_graphql({
   pretty: true
 }));
 
+// ---------- RESTFUL ---------- //
+
+app.get('/restful/characters/:name/:surname/:rank/:status', function (req, res) {
+  res.end(JSON.stringify(db_find_characters(req.params.name, req.params.surname, req.params.rank, req.params.status)));
+});
+
+app.get('/restful/rank/:name', function (req, res) {
+  res.end(JSON.stringify(db_find_rank(req.params.name)));
+});
+
+app.get('/restful/status/:name', function (req, res) {
+  res.end(JSON.stringify(db_find_status(req.params.name)));
+});
+
+// ---------- SERVER ---------- //
 app.listen(8080);
 console.log("started on port 8080");
 module.exports = app;
