@@ -85,7 +85,6 @@ var db = {
 };
 
 function db_find_characters(name, surname, rank, status) {
-  console.log('Finding characters with name=' + name + ', surname=' + surname + ', rank=' + rank + ', status=' + status);
   var characters = [];
   for (var i = 0; i < db.characters.length; i++) {
     var valid = true;
@@ -212,8 +211,13 @@ app.use('/graphql', express_graphql({
 
 // ---------- RESTFUL ---------- //
 
-app.get('/restful/characters/:name/:surname/:rank/:status', function (req, res) {
-  res.end(JSON.stringify(db_find_characters(req.params.name, req.params.surname, req.params.rank, req.params.status)));
+app.get(/\/restful\/characters\/(name\/[A-z]+\/)?(surname\/[A-z]+\/)?(rank\/[A-z]+\/)?(status\/[A-z]+\/)?/, function (req, res) {
+  for (var i = 0; i < 4; i++) {
+    if (req.params[i] !== undefined) {
+      req.params[i] = /[a-z]+\/([A-z]+)\//.exec(req.params[i])[1];
+    }
+  }
+  res.end(JSON.stringify(db_find_characters(req.params[0], req.params[1], req.params[2], req.params[3])));
 });
 
 app.get('/restful/rank/:name', function (req, res) {
