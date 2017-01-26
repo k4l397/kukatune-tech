@@ -6,83 +6,8 @@ var app = express();
 
 // ---------- DATABASE ---------- //
 
-var db = {
-  characters: [
-    {
-      name: 'John',
-      surname: 'Yossarian',
-      rank: 0,
-      status: 0
-    },
-    {
-      name: 'Albert',
-      surname: 'Tappman',
-      rank: 1,
-      status: 0
-    },
-    {
-      name: 'Chuck',
-      surname: 'Cathcart',
-      rank: 2,
-      status: 0
-    },
-    {
-      name: 'Milo',
-      surname: 'Minderbinder',
-      rank: 3,
-      status: 0
-    },
-    {
-      name: 'Edward',
-      surname: 'Nately',
-      rank: 3,
-      status: 1
-    },
-    {
-      name: 'Major',
-      surname: 'Major',
-      rank: 4,
-      status: 0
-    },
-    {
-      name: 'Unknown',
-      surname: 'Aardvaark',
-      rank: 1,
-      status: 1
-    },
-    {
-      name: 'Unknown',
-      surname: 'McWatt',
-      rank: 3,
-      status: 1
-    }
-  ],
-  ranks: [
-    {
-      name: 'Captain'
-    },
-    {
-      name: 'Chaplain'
-    },
-    {
-      name: 'Colonel'
-    },
-    {
-      name: 'Lieutenant'
-    },
-    {
-      name: 'Major'
-    }
-  ],
-  status: [
-    {
-      name: 'Alive'
-    },
-    {
-      name: 'Deceased'
-    }
-  ]
-};
+var db = require('./database.json');
+console.log(db);
 
 function db_find_characters(name, surname, rank, status) {
   var characters = [];

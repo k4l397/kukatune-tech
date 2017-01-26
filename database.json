@@ -2,76 +2,76 @@
   "houses": [
     {
       "name": "Arryn",
-      "regions": [1],
+      "regions": [1]
     },
     {
       "name": "Frey",
-      "regions": [],
+      "regions": []
     },
     {
       "name": "Greyjoy",
-      "regions": [3],
+      "regions": [3]
     },
     {
       "name": "Lannister",
-      "regions": [4,5],
+      "regions": [4,5]
     },
     {
       "name": "Stark",
-      "regions": [0],
+      "regions": [0]
     },
     {
       "name": "Tyrell",
-      "regions": [6],
+      "regions": [6]
     },
     {
       "name": "Martell",
-      "regions": [8],
+      "regions": [8]
     },
     {
       "name": "Bolton",
-      "regions": [],
+      "regions": []
     },
     {
       "name": "Baratheon",
-      "regions": [],
+      "regions": []
     },
     {
       "name": "Targaryen",
-      "regions": [],
+      "regions": []
     },
     {
       "name": "Tully",
-      "regions": [],
+      "regions": []
     }
   ],
   "provinces": [
     {
-      "name": "The North",
+      "name": "The North"
     },
     {
-      "name": "The Vale",
+      "name": "The Vale"
     },
     {
-      "name": "The Riverlands",
+      "name": "The Riverlands"
     },
     {
-      "name": "The Iron Islands",
+      "name": "The Iron Islands"
     },
     {
-      "name": "The Westerlands",
+      "name": "The Westerlands"
     },
     {
-      "name": "The Crownlands",
+      "name": "The Crownlands"
     },
     {
-      "name": "The Reach",
+      "name": "The Reach"
     },
     {
-      "name": "The Stormlands",
+      "name": "The Stormlands"
     },
     {
-      "name": "Dorne",
+      "name": "Dorne"
     }
   ],
   "characters": [
@@ -161,7 +161,7 @@
         "Protector of the Realm",
         "Savior of the City"
       ],
-      "house": 3,
+      "house": 3
     },
     {
       "first_name": "Cersei",
@@ -308,7 +308,7 @@
       "status": "Alive",
       "titles": [
         "King in the North",
-        "998th Lord Commander of the Night's Watch",
+        "998th Lord Commander of the Night's Watch"
       ],
       "house": 4
     },
@@ -477,7 +477,7 @@
       "status": "Alive",
       "titles": [
         "Lord of Riverrun",
-        "Lord Paramount of the Trident",
+        "Lord Paramount of the Trident"
       ],
       "house": 10
     },
@@ -491,5 +491,5 @@
       ],
       "house": 10
     }
-  ],
+  ]
 }
