@@ -1,77 +1,75 @@
 {
   "houses": [
     {
-      "name": "Arryn",
-      "regions": [1]
+      "name": "Arryn"
     },
     {
-      "name": "Frey",
-      "regions": []
+      "name": "Frey"
     },
     {
-      "name": "Greyjoy",
-      "regions": [3]
+      "name": "Greyjoy"
     },
     {
-      "name": "Lannister",
-      "regions": [4,5]
+      "name": "Lannister"
     },
     {
-      "name": "Stark",
-      "regions": [0]
+      "name": "Stark"
     },
     {
-      "name": "Tyrell",
-      "regions": [6]
+      "name": "Tyrell"
     },
     {
-      "name": "Martell",
-      "regions": [8]
+      "name": "Martell"
     },
     {
-      "name": "Bolton",
-      "regions": []
+      "name": "Bolton"
     },
     {
-      "name": "Baratheon",
-      "regions": []
+      "name": "Baratheon"
     },
     {
-      "name": "Targaryen",
-      "regions": []
+      "name": "Targaryen"
     },
     {
-      "name": "Tully",
-      "regions": []
+      "name": "Tully"
     }
   ],
   "regions": [
     {
-      "name": "The North"
+      "name": "The North",
+      "house": 4
     },
     {
-      "name": "The Vale"
+      "name": "The Vale",
+      "house": 0
     },
     {
-      "name": "The Riverlands"
+      "name": "The Riverlands",
+      "house": 1
     },
     {
-      "name": "The Iron Islands"
+      "name": "The Iron Islands",
+      "house": 2
     },
     {
-      "name": "The Westerlands"
+      "name": "The Westerlands",
+      "house": 3
     },
     {
-      "name": "The Crownlands"
+      "name": "The Crownlands",
+      "house": 3
     },
     {
-      "name": "The Reach"
+      "name": "The Reach",
+      "house": 5
     },
     {
-      "name": "The Stormlands"
+      "name": "The Stormlands",
+      "house": 3
     },
     {
-      "name": "Dorne"
+      "name": "Dorne",
+      "house": 6
     }
   ],
   "characters": [

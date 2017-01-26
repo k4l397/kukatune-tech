@@ -2,7 +2,7 @@
 
 var db = require('./database.json');
 
-function db_find_houses(id, name, regions) {
+function db_find_houses(id, name) {
   var result = [];
   for (var i = 0; i < db.houses.length; i++) {
 
@@ -10,32 +10,21 @@ function db_find_houses(id, name, regions) {
 
     if (id !== undefined && i !== id) valid = false;
 
-    if (name !== undefined && db.houses[i].name === name) valid = false
-
-    if (regions !== undefined) {
-      var valid2 = false;
-
-      for (var j = 0; j < db.houses[i].regions.length; j++) {
-
-        if (regions.some(function(element, index, array) {
-          return element === db.houses[i].regions[j].name;
-        })) valid2 = true;
-      }
-
-      if (!valid2) valid = false;
-    }
+    if (name !== undefined && db.houses[i].name === name) valid = false;
 
     if (valid) result.push(db.houses[i]);
   }
   return result;
 }
 
-function db_find_regions(id) {
+function db_find_regions(id, house) {
   var result = [];
   for (var i = 0; i < db.regions.length; i++) {
     var valid = true;
 
     if (id !== undefined && i !== id) valid = false;
+
+    if (house !== undefined && house !== db.regions[i].house) valid = false;
 
     if (valid) result.push(db.regions[i]);
   }
