@@ -95,52 +95,29 @@ function db_find_characters(name, surname, rank, status) {
     if (status !== undefined && status !== db.status[db.characters[i].status].name) valid = false;
 
     if (valid) {
-      characters.push(db.characters[i]);
+      characters.push({
+        name: db.characters[i].name,
+        surname: db.characters[i].surname,
+        rank: db_find_rank(db.characters[i].rank),
+        status: db_find_status(db.characters[i].status)
+      });
     }
   }
   return characters;
 }
 
-function db_find_rank(name) {
-  for (var i = 0; i < db.ranks.length; i++) {
-    if (db.ranks[i].name === name) {
-      return db.ranks[i];
-    }
-  }
+function db_find_rank(id) {
+  return db.ranks[id].name;
 }
 
-function db_find_status(name) {
-  for (var i = 0; i < db.status.length; i++) {
-    if (db.status[i].name === name) {
-      return db.status[i];
-    }
-  }
+function db_find_status(id) {
+  return db.status[id].name;
 }
 
 // ---------- GRAPHQL ---------- //
 
 var graphql = require('graphql');
 var express_graphql = require('express-graphql');
-
-var graphql_status_type = new graphql.GraphQLObjectType({
-  name: 'Status',
-  description: 'A character\'s status at the end of the book',
-  fields: () => ({
-    name: {
-      type: new graphql.GraphQLNonNull(graphql.GraphQLString)
-    }
-  })
-});
-
-var graphql_rank_type = new graphql.GraphQLObjectType({
-  name: 'Rank',
-  description: 'A character\'s military rank',
-  fields: () => ({
-    name: {
-      type: new graphql.GraphQLNonNull(graphql.GraphQLString)
-    }
-  })
-});
 
 var graphql_character_type = new graphql.GraphQLObjectType({
   name: 'Character',
@@ -153,10 +130,10 @@ var graphql_character_type = new graphql.GraphQLObjectType({
       type: new graphql.GraphQLNonNull(graphql.GraphQLString)
     },
     rank: {
-      type: new graphql.GraphQLNonNull(graphql_rank_type)
+      type: new graphql.GraphQLNonNull(graphql.GraphQLString)
     },
     status: {
-      type: new graphql.GraphQLNonNull(graphql_status_type)
+      type: new graphql.GraphQLNonNull(graphql.GraphQLString)
     }
   })
 });
@@ -175,15 +152,15 @@ var graphql_schema = new graphql.GraphQLSchema({
         }
       },
       rank: {
-        type: graphql_rank_type,
+        type: graphql.GraphQLString,
         args: {
-          name: {type: new graphql.GraphQLNonNull(graphql.GraphQLString)}
+          id: {type: new graphql.GraphQLNonNull(graphql.GraphQLInt)}
         }
       },
       status: {
-        type: graphql_status_type,
+        type: graphql.GraphQLString,
         args: {
-          name: {type: new graphql.GraphQLNonNull(graphql.GraphQLString)}
+          id: {type: new graphql.GraphQLNonNull(graphql.GraphQLInt)}
         }
       }
     }
@@ -194,11 +171,11 @@ var graphql_root = {
   characters: ({name, surname, rank, status}) => {
     return db_find_characters(name, surname, rank, status);
   },
-  rank: ({name}) => {
-    return db_find_rank(name);
+  rank: ({id}) => {
+    return db_find_rank(id);
   },
-  status: ({name}) => {
-    return db_find_status(name);
+  status: ({id}) => {
+    return db_find_status(id);
   }
 };
 
@@ -211,21 +188,16 @@ app.use('/graphql', express_graphql({
 
 // ---------- RESTFUL ---------- //
 
-app.get(/\/restful\/characters\/(name\/[A-z]+\/)?(surname\/[A-z]+\/)?(rank\/[A-z]+\/)?(status\/[A-z]+\/)?/, function (req, res) {
-  for (var i = 0; i < 4; i++) {
-    if (req.params[i] !== undefined) {
-      req.params[i] = /[a-z]+\/([A-z]+)\//.exec(req.params[i])[1];
-    }
-  }
-  res.end(JSON.stringify(db_find_characters(req.params[0], req.params[1], req.params[2], req.params[3])));
+app.get('/restful/characters/', function (req, res) {
+  res.end(JSON.stringify(db_find_characters(req.query.name, req.query.surname, req.query.rank, req.query.status)));
 });
 
-app.get('/restful/rank/:name', function (req, res) {
-  res.end(JSON.stringify(db_find_rank(req.params.name)));
+app.get('/restful/rank/', function (req, res) {
+  res.end(JSON.stringify(db_find_rank(req.query.id)));
 });
 
-app.get('/restful/status/:name', function (req, res) {
-  res.end(JSON.stringify(db_find_status(req.params.name)));
+app.get('/restful/status/', function (req, res) {
+  res.end(JSON.stringify(db_find_status(req.query.id)));
 });
 
 // ---------- SERVER ---------- //

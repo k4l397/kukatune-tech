@@ -1,0 +1,495 @@
+{
+  "houses": [
+    {
+      "name": "Arryn",
+      "regions": [1],
+    },
+    {
+      "name": "Frey",
+      "regions": [],
+    },
+    {
+      "name": "Greyjoy",
+      "regions": [3],
+    },
+    {
+      "name": "Lannister",
+      "regions": [4,5],
+    },
+    {
+      "name": "Stark",
+      "regions": [0],
+    },
+    {
+      "name": "Tyrell",
+      "regions": [6],
+    },
+    {
+      "name": "Martell",
+      "regions": [8],
+    },
+    {
+      "name": "Bolton",
+      "regions": [],
+    },
+    {
+      "name": "Baratheon",
+      "regions": [],
+    },
+    {
+      "name": "Targaryen",
+      "regions": [],
+    },
+    {
+      "name": "Tully",
+      "regions": [],
+    }
+  ],
+  "provinces": [
+    {
+      "name": "The North",
+    },
+    {
+      "name": "The Vale",
+    },
+    {
+      "name": "The Riverlands",
+    },
+    {
+      "name": "The Iron Islands",
+    },
+    {
+      "name": "The Westerlands",
+    },
+    {
+      "name": "The Crownlands",
+    },
+    {
+      "name": "The Reach",
+    },
+    {
+      "name": "The Stormlands",
+    },
+    {
+      "name": "Dorne",
+    }
+  ],
+  "characters": [
+    {
+      "first_name": "Jon",
+      "last_name": "Arryn",
+      "status": "Deceased",
+      "titles": [
+        "Lord of the Eyrie",
+        "Hand of the King",
+        "Lord Paramount of the Vale",
+        "Warden of the East"
+      ],
+      "house": 0
+    },
+    {
+      "first_name": "Lysa",
+      "last_name": "Baelish",
+      "status": "Deceased",
+      "titles": [
+        "Lady Regent of the Vale"
+      ],
+      "house": 0
+    },
+    {
+      "first_name": "Robin",
+      "last_name": "Arryn",
+      "status": "Alive",
+      "titles": [
+        "Lord of the Eyrie",
+        "Lord Paramount of the Vale",
+        "Warden of the East"
+      ],
+      "house": 0
+    },
+    {
+      "first_name": "Walder",
+      "last_name": "Frey",
+      "status": "Deceased",
+      "titles": [
+        "Lord of the Crossing",
+        "Lord of Riverrun",
+        "Lord Paramount of the Trident"
+      ],
+      "house": 1
+    },
+    {
+      "first_name": "Balon",
+      "last_name": "Greyjoy",
+      "status": "Deceased",
+      "titles": [
+        "King of the Iron Islands",
+        "King of Salt and Rock",
+        "Son of the Sea Wind",
+        "Lord Reaper of Pyke",
+        "Lord of the Iron Islands"],
+      "house": 2
+    },
+    {
+      "first_name": "Theon",
+      "last_name": "Greyjoy",
+      "status": "Alive",
+      "titles": [
+        "Prince of Winterfell"
+      ],
+      "house": 2
+    },
+    {
+      "first_name": "Yara",
+      "last_name": "Greyjoy",
+      "status": "Alive",
+      "titles": [
+        "Queen of the Iron Islands"
+      ],
+      "house": 2
+    },
+    {
+      "first_name": "Tywin",
+      "last_name": "Lannister",
+      "status": "Deceased",
+      "titles": [
+        "Lord of Casterly Rock",
+        "Lord Paramount of the Westerlands",
+        "Warden of the West",
+        "Shield of Lannisport",
+        "Hand of the King",
+        "Protector of the Realm",
+        "Savior of the City"
+      ],
+      "house": 3,
+    },
+    {
+      "first_name": "Cersei",
+      "last_name": "Baratheon",
+      "status": "Alive",
+      "titles": [
+        "Queen of the Andals and the First Men",
+        "Protector of the Seven Kingdoms",
+        "Lady of Casterly Rock",
+        "Lady Paramount of the Westerlands",
+        "Queen Mother",
+        "Queen Regent",
+        "Queen Consort"
+      ],
+      "house": 3
+    },
+    {
+      "first_name": "Joffrey",
+      "last_name": "Lannister",
+      "status": "Deceased",
+      "titles": [
+        "King of the Andals and the First Men",
+        "Lord of the Seven Kingdoms",
+        "Protector of the Realm",
+        "Lord Paramount of the Stormlands",
+        "Lord of Storm's End"
+      ],
+      "house": 3
+    },
+    {
+      "first_name": "Myrcella",
+      "last_name": "Lannister",
+      "status": "Deceased",
+      "titles": [
+        "Princess"
+      ],
+      "house": 3
+    },
+    {
+      "first_name": "Tommen",
+      "last_name": "Lannister",
+      "status": "Deceased",
+      "titles": [
+        "King of the Andals and the First Men",
+        "Lord of the Seven Kingdoms",
+        "Lord of Storm's End",
+        "Lord Paramount of the Stormlands"
+      ],
+      "house": 3
+    },
+    {
+      "first_name": "Jaime",
+      "last_name": "Lannister",
+      "status": "Alive",
+      "titles": [
+        "Ser",
+        "Lord Commander of the Kingsguard"
+      ],
+      "house": 3
+    },
+    {
+      "first_name": "Tyrion",
+      "last_name": "Lannister",
+      "status": "Alive",
+      "titles": [
+        "Hand of the Queen",
+        "Master of Coin",
+        "Acting Hand of the King"
+      ],
+      "house": 3
+    },
+    {
+      "first_name": "Eddard",
+      "last_name": "Stark",
+      "status": "Deceased",
+      "titles": [
+        "Lord of Winterfell",
+        "Lord Paramount of the North",
+        "Warden of the North",
+        "Hand of the King",
+        "Lord Regent",
+        "Protector of the Realm"
+      ],
+      "house": 4
+    },
+    {
+      "first_name": "Catelyn",
+      "last_name": "Stark",
+      "status": "Deceased",
+      "titles": [],
+      "house": 4
+    },
+    {
+      "first_name": "Robb",
+      "last_name": "Stark",
+      "status": "Deceased",
+      "titles": [
+        "King in the North",
+        "Lord of Winterfell"
+      ],
+      "house": 4
+    },
+    {
+      "first_name": "Sansa",
+      "last_name": "Bolton",
+      "status": "Alive",
+      "titles": [
+        "Princess",
+        "Lady of Winterfell"
+      ],
+      "house": 4
+    },
+    {
+      "first_name": "Arya",
+      "last_name": "Stark",
+      "status": "Alive",
+      "titles": [
+        "Princess"
+      ],
+      "house": 4
+    },
+    {
+      "first_name": "Brandon",
+      "last_name": "Stark",
+      "status": "Alive",
+      "titles": [
+        "Prince",
+        "Acting Lord of Winterfell"
+      ],
+      "house": 4
+    },
+    {
+      "first_name": "Rickon",
+      "last_name": "Stark",
+      "status": "Deceased",
+      "titles": [
+        "Prince"
+      ],
+      "house": 4
+    },
+    {
+      "first_name": "Jon",
+      "last_name": "Targaryen",
+      "status": "Alive",
+      "titles": [
+        "King in the North",
+        "998th Lord Commander of the Night's Watch",
+      ],
+      "house": 4
+    },
+    {
+      "first_name": "Olenna",
+      "last_name": "Tyrell",
+      "status": "Alive",
+      "titles": [],
+      "house": 5
+    },
+    {
+      "first_name": "Mace",
+      "last_name": "Tyrell",
+      "status": "Deceased",
+      "titles": [
+        "Lord of Highgarden",
+        "Lord Paramount of the Reach",
+        "Warden of the South",
+        "Master of Ships",
+        "Master of Coin",
+        "Hand of the King"
+      ],
+      "house": 5
+    },
+    {
+      "first_name": "Margery",
+      "last_name": "Lannister",
+      "status": "Deceased",
+      "titles": [
+        "Queen Consort"
+      ],
+      "house": 5
+    },
+    {
+      "first_name": "Loras",
+      "last_name": "Tyrell",
+      "status": "Deceased",
+      "titles": [
+        "Ser",
+        "Lord Commander of the Kingsguard"
+      ],
+      "house": 5
+    },
+    {
+      "first_name": "Doran",
+      "last_name": "Martell",
+      "status": "Deceased",
+      "titles": [
+        "Prince of Dorne",
+        "Lord of Sunspear"
+      ],
+      "house": 6
+    },
+    {
+      "first_name": "Oberyn",
+      "last_name": "Martell",
+      "status": "Deceased",
+      "titles": [
+        "Prince"
+      ],
+      "house": 6
+    },
+    {
+      "first_name": "Ellaria",
+      "last_name": "Sand",
+      "status": "Alive",
+      "titles": [],
+      "house": 6
+    },
+    {
+      "first_name": "Roose",
+      "last_name": "Bolton",
+      "status": "Deceased",
+      "titles": [
+        "Lord of the Dreadfort",
+        "Lord of Winterfell",
+        "Lord Paramount of the North",
+        "Warden of the North"
+      ],
+      "house": 7
+    },
+    {
+      "first_name": "Ramsay",
+      "last_name": "Bolton",
+      "status": "Deceased",
+      "titles": [
+        "Lord of the Dreadfort",
+        "Lord of Winterfell",
+        "Lord Paramount of the North",
+        "Warden of the North",
+        "Castellan of the Dreadfort"
+      ],
+      "house": 7
+    },
+    {
+      "first_name": "Robert",
+      "last_name": "Baratheon",
+      "status": "Deceased",
+      "titles": [
+        "King of the Andals and the First Men",
+        "Lord of the Seven Kingdoms",
+        "Protector of the Realm",
+        "Lord of Storm's End",
+        "Lord Paramount of the Stormlands"
+      ],
+      "house": 8
+    },
+    {
+      "first_name": "Stannis",
+      "last_name": "Baratheon",
+      "status": "Deceased",
+      "titles": [
+        "King of the Andals and the First Men",
+        "Lord of the Seven Kingdoms",
+        "Protector of the Realm",
+        "Lord of Dragonstone",
+        "Lord of Storm's End",
+        "Lord Paramount of the Stormlands",
+        "Master of Ships"
+      ],
+      "house": 8
+    },
+    {
+      "first_name": "Renly",
+      "last_name": "Baratheon",
+      "status": "Deceased",
+      "titles": [
+        "King of the Andals and the First Men",
+        "Lord of the Seven Kingdoms",
+        "Protector of the Realm",
+        "Lord of Storm's End",
+        "Lord Paramount of the Stormlands",
+        "Master of Laws"
+      ],
+      "house": 8
+    },
+    {
+      "first_name": "Daenerys",
+      "last_name": "Targaryen",
+      "status": "Alive",
+      "titles": [
+        "Queen of the Andals, the Rhoynar, and the First Men",
+        "Lady Regent of the Seven Kingdoms",
+        "Protector of the Realm",
+        "Khaleesi of the Great Grass Sea",
+        "Breaker of Chains",
+        "Mother of Dragons",
+        "Queen of Meereen"
+      ],
+      "house": 9
+    },
+    {
+      "first_name": "Viserys",
+      "last_name": "Targaryen",
+      "status": "Deceased",
+      "titles": [
+        "King of the Andals and the First Men",
+        "Lord of the Seven Kingdoms",
+        "Protector of the Realm"
+      ],
+      "house": 9
+    },
+    {
+      "first_name": "Edmure",
+      "last_name": "Tully",
+      "status": "Alive",
+      "titles": [
+        "Lord of Riverrun",
+        "Lord Paramount of the Trident",
+      ],
+      "house": 10
+    },
+    {
+      "first_name": "Brynden",
+      "last_name": "Tully",
+      "status": "Deceased",
+      "titles": [
+        "Ser",
+        "Acting Lord of Riverrun"
+      ],
+      "house": 10
+    }
+  ],
+}
