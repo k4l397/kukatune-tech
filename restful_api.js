@@ -5,7 +5,7 @@ app.get('/restful/characters/', function (req, res) {
 });
 
 app.get('/restful/regions/', function (req, res) {
-  res.end(JSON.stringify(db_find_regions(req.query.id, req.query.house)));
+  res.end(JSON.stringify(db_find_regions(req.query.id, req.query.name req.query.house)));
 });
 
 app.get('/restful/houses/', function (req, res) {

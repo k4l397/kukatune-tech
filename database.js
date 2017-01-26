@@ -17,12 +17,14 @@ function db_find_houses(id, name) {
   return result;
 }
 
-function db_find_regions(id, house) {
+function db_find_regions(id, name, house) {
   var result = [];
   for (var i = 0; i < db.regions.length; i++) {
     var valid = true;
 
     if (id !== undefined && i !== id) valid = false;
+
+    if (name !== undefined && name !== db.regions[i].name) valid = false;
 
     if (house !== undefined && house !== db.regions[i].house) valid = false;
 
