@@ -1,12 +1,12 @@
 // ---------- DATABASE ---------- //
+const db = require('./database.json');
 
-var db = require('./database.json');
+function find_houses(id, name) {
+  let result = [];
+  for (let i = 0; i < db.houses.length; i++) {
+    db.houses[i].id = i;
 
-function db_find_houses(id, name) {
-  var result = [];
-  for (var i = 0; i < db.houses.length; i++) {
-
-    var valid = true;
+    let valid = true;
 
     if (id !== undefined && i !== id) valid = false;
 
@@ -17,10 +17,13 @@ function db_find_houses(id, name) {
   return result;
 }
 
-function db_find_regions(id, name, house) {
-  var result = [];
-  for (var i = 0; i < db.regions.length; i++) {
-    var valid = true;
+function find_regions(id, name, house) {
+
+  let result = [];
+  for (let i = 0; i < db.regions.length; i++) {
+    db.regions[i].id = i;
+
+    let valid = true;
 
     if (id !== undefined && i !== id) valid = false;
 
@@ -33,11 +36,13 @@ function db_find_regions(id, name, house) {
   return result;
 }
 
-function db_find_character(id, first_name, last_name, status, titles, house) {
-  var result = [];
+function find_characters(id, first_name, last_name, status, titles, house) {
+  let result = [];
 
-  for (var i = 0; i < db.characters.length; i++) {
-    var valid = true;
+  for (let i = 0; i < db.characters.length; i++) {
+    db.characters[i].id = i;
+
+    let valid = true;
 
     if (id !== undefined && i !== id) valid = false;
 
@@ -48,9 +53,9 @@ function db_find_character(id, first_name, last_name, status, titles, house) {
     if (status !== undefined && status !== db.characters[i].status) valid = false;
 
     if (titles !== undefined) {
-      var valid2 = false;
+      let valid2 = false;
 
-      for (var j = 0; j < db.characters[i].titles.length; j++) {
+      for (let j = 0; j < db.characters[i].titles.length; j++) {
 
         if(titles.some(function(element, index, array) {
           return element == db.characters[i].titles[j];
@@ -66,3 +71,5 @@ function db_find_character(id, first_name, last_name, status, titles, house) {
 
   return result;
 }
+
+module.exports = {find_houses, find_regions, find_characters};

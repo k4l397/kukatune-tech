@@ -1,12 +1,14 @@
 // ---------- SERVER ---------- //
 
-var express = require('express');
+const express = require('express');
 
-var app = express();
+const app = express();
 
-require('./database.js');
-require('./graphql_api.js');
-require('./restful_api.js');
+const db = require('./database.js');
+
+require('./graphql_api.js')(app, db);
+
+require('./restful_api.js')(app, db);
 
 app.listen(8080);
 console.log("started on port 8080");
