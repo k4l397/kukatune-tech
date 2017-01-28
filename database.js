@@ -10,7 +10,7 @@ function find_houses(id, name) {
 
     if (id !== undefined && i !== id) valid = false;
 
-    if (name !== undefined && db.houses[i].name === name) valid = false;
+    if (name !== undefined && db.houses[i].name !== name) valid = false;
 
     if (valid) result.push(db.houses[i]);
   }
